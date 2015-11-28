@@ -1,6 +1,9 @@
 <?php
 class pageController extends Controller{
+	protected $title = '';
+
 	public function index(){
-		$this->view('page/index');
+		$this->title = 'home';
+		$this->view('page/index', ['title' => $this->title]);
 	}
 }
