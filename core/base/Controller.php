@@ -9,7 +9,7 @@ class Controller{
 
 		require_once ASSETS_URL . $this->template . 'start.php';
 		require_once VIEWS . $view . '.php';
-		require_once ASSETS_URL . $this->template . 'blocks/end.php';
+		require_once ASSETS_URL . $this->template . 'end.php';
 	}
 
 	public function template(){

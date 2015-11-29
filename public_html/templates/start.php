@@ -1,2 +1,1 @@
-<?php //require_once Controller::blocks('head');?>
-<?php echo Controller::assets('css','bootstrap'); ?>
+<?php require_once Controller::blocks('head');?>
