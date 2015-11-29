@@ -21,6 +21,6 @@ class Controller{
 		return TEMPLATES . $this->template . DS;
 	}
 	public function template_assets(){
-		return TEMPLATES . $this->template . 'assets' . DS;
+		return TEMPLATE_URL . $this->template . '/assets/';
 	}
 }

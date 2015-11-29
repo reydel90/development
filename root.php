@@ -19,6 +19,6 @@ define('FUNCTIONS', CORE_PATH . 'functions' . DS);
 //Templates routes
 define('TEMPLATES', VIEWS . 'templates' . DS);
 //Url routes
-//define('BASE_URL', 'http://deployapp.no-ip.org');
-//define('TEMPLATE_ASSETS', BASE_URL . '/templates/');
+define('BASE_URL', 'http://deployapp.no-ip.org');
+define('TEMPLATE_URL', BASE_URL . '/templates/');
 require_once CONFIG_PATH . 'init.php';
