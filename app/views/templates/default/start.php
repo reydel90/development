@@ -1,1 +1,1 @@
-<?php echo Controller::blocks('head');?>
+<?php require_once Controller::blocks('head');?>

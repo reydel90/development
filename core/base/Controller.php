@@ -16,12 +16,12 @@ class Controller{
 		return TEMPLATES . $this->template . DS;
 	}
 	public function template_public(){
-		return 
+		return ASSETS_URL . $this->template . '/'
 	}
 	public function blocks($name){
 		return self::template() . 'blocks' . DS . $name . '.php';
 	}
 	public function assets($type, $name){
-		return self::template_public() . $this->template . '/' . $type . '/' . $name . '.' . $type;
+		return self::template_public() . '/' . $type . '/' . $name . '.' . $type;
 	}
 }
