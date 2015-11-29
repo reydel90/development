@@ -22,6 +22,6 @@ class Controller{
 		return self::template() . 'blocks' . DS . $name . '.php';
 	}
 	public function assets($type, $name){
-		return self::template_public() . '/' . $type . '/' . $name . '.' . $type;
+		return self::template_public() . $type . '/' . $name . '.' . $type;
 	}
 }
