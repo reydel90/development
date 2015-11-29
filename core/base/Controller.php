@@ -1,24 +1,27 @@
 <?php 
 class Controller{
-	protected $template = 'default/';		  
+	protected $template = 'default';		  
 	public function view($view, $data = []){
 		$url = Url::parse();
 		if(empty($url[0])){
 			unset($url[0]);
 		}
 
-		require_once ASSETS_URL . $this->template . 'start.php';
+		require_once TEMPLATES . $this->template . DS . 'start.php';
 		require_once VIEWS . $view . '.php';
-		require_once ASSETS_URL . $this->template . 'end.php';
+		require_once TEMPLATES . $this->template . DS . 'end.php';
 	}
 
 	public function template(){
-		return ASSETS_URL . $this->template;
+		return TEMPLATES . $this->template . DS;
+	}
+	public function template_public(){
+		return 
 	}
 	public function blocks($name){
-		return self::template() . 'blocks/' . $name . '.php';
+		return self::template() . 'blocks' . DS . $name . '.php';
 	}
 	public function assets($type, $name){
-		return self::template() . 'assets/' . $type . '/' . $name . '.' . $type;
+		return self::template_public() . $this->template . '/' . $type . '/' . $name . '.' . $type;
 	}
 }
