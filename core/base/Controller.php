@@ -9,16 +9,16 @@ class Controller{
 
 		require_once self::template() . 'start.php';
 		require_once VIEWS . $view . '.php';
-		require_once self::template() . 'end.php';
+		require_once self::blocks('end');
 	}
 
 	public function template(){
 		return ASSETS_URL . $this->template;
 	}
 	public function blocks($name){
-		echo self::template() . 'blocks/' . $name . '.php';
+		return self::template() . 'blocks/' . $name . '.php';
 	}
 	public function assets($type, $name){
-		echo self::template() . 'assets/' . $type . '/' . $name . '.' . $type;
+		return self::template() . 'assets/' . $type . '/' . $name . '.' . $type;
 	}
 }

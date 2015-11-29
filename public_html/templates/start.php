@@ -1,1 +1,1 @@
-<?php Controller::blocks('head')?>
+<?php echo Controller::blocks('head');?>
