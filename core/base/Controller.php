@@ -1,26 +1,18 @@
 <?php 
 class Controller{
-	protected $template  = 'default',
-			  $starpage  = 'start.php',
-			  $endpage   = 'end.php',
-			  $routeView = '';
-
-			  
+	protected $template = 'default';		  
 	public function view($view, $data = []){
 		$url = Url::parse();
 		if(empty($url[0])){
 			unset($url[0]);
 		}
-		$this->routeView = TEMPLATES . $this->template . DS;
-		require_once $this->routeView . $this->starpage;
+
+		require_once self::template() . 'start.php';
 		require_once VIEWS . $view . '.php';
-		require_once $this->routeView . $this->endpage;
+		require_once self::template() . 'end.php';
 	}
 
 	public function template(){
 		return TEMPLATES . $this->template . DS;
-	}
-	public function template_assets(){
-		return TEMPLATE_URL . $this->template . '/assets/';
 	}
 }
