@@ -16,7 +16,7 @@ class Controller{
 		return TEMPLATES . $this->template . DS;
 	}
 	public function template_public(){
-		return ASSETS_URL . $this->template . '/'
+		return ASSETS_URL . $this->template . '/';
 	}
 	public function blocks($name){
 		return self::template() . 'blocks' . DS . $name . '.php';
