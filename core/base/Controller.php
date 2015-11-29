@@ -7,9 +7,9 @@ class Controller{
 			unset($url[0]);
 		}
 
-		require_once self::template() . 'start.php';
+		//require_once self::template() . 'start.php';
 		require_once VIEWS . $view . '.php';
-		require_once self::blocks('end');
+		//require_once self::blocks('end');
 	}
 
 	public function template(){
