@@ -1,0 +1,1 @@
+<?php Controller::blocks('head')?>

@@ -1,6 +1,6 @@
 <?php 
 class Controller{
-	protected $template = 'default';		  
+	protected $template = 'default/';		  
 	public function view($view, $data = []){
 		$url = Url::parse();
 		if(empty($url[0])){
@@ -13,6 +13,12 @@ class Controller{
 	}
 
 	public function template(){
-		return TEMPLATES . $this->template . DS;
+		return ASSETS_URL . $this->template;
+	}
+	public function blocks($name){
+		echo self::template() . 'blocks/' . $name . '.php';
+	}
+	public function assets($type, $name){
+		echo self::template() . 'assets/' . $type . '/' . $name . '.' . $type;
 	}
 }
