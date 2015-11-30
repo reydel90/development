@@ -1,10 +1,19 @@
 <?php 
+require_once FUNCTIONS . 'detectmobilebrowser.php';
+
 class Controller{
 	protected $template = 'default';		  
 	public function view($view, $data = []){
 		$url = Url::parse();
 		if(empty($url[0])){
 			unset($url[0]);
+		}
+
+		// Your default site layouts.
+		// Update this array if you have fewer layout types.
+		function layoutTypes()
+		{
+		    return array('classic', 'mobile', 'tablet');
 		}
 
 		require_once TEMPLATES . $this->template . DS . 'start.php';
