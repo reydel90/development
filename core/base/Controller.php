@@ -14,9 +14,9 @@ class Controller{
 		if($detect->isAndroidOS()){
 			$this->template = 'android';
 		}
-		require_once TEMPLATES . $this->template . DS . 'start.php';
-		require_once VIEWS . $this->template . $view . '.php';
-		require_once TEMPLATES . $this->template . DS . 'end.php';
+		//require_once TEMPLATES . $this->template . DS . 'start.php';
+		require_once VIEWS . $this->template . DS . $view . '.php';
+		//require_once TEMPLATES . $this->template . DS . 'end.php';
 	}
 
 	public function template(){
