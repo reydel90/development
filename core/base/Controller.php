@@ -1,6 +1,6 @@
 <?php 
 class Controller{
-	protected $template = 'default';		  
+	protected $template = 'desktop';		  
 	public function view($view, $data = []){
 		$url = Url::parse();
 		if(empty($url[0])){
@@ -9,13 +9,13 @@ class Controller{
 
 		$detect = new Mobile_Detect;
 		if($detect->isiOS()){
-			echo 'esto es iOS';
+			$this->template = 'ios';
 		}
 		if($detect->isAndroidOS()){
-			echo 'esto es Android';
+			$this->template = 'android';
 		}
 		require_once TEMPLATES . $this->template . DS . 'start.php';
-		require_once VIEWS . $view . '.php';
+		require_once VIEWS . $this->template . $view . '.php';
 		require_once TEMPLATES . $this->template . DS . 'end.php';
 	}
 
