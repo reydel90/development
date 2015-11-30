@@ -1,1 +1,0 @@
-<p>Page content goes here for iOS</p>

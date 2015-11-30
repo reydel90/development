@@ -20,8 +20,9 @@ class Controller{
 		if($detect->isAndroidOS()){
 			$this->device = 'android';
 		}
-		echo $this->device;
+		return $this->device;
 	}
+
 	public function template(){
 		return TEMPLATES . $this->template . DS;
 	}
