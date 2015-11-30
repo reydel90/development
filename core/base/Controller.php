@@ -34,6 +34,6 @@ class Controller{
 	}
 	public function assets($type, $name, $device){
 		$device = self::detect();
-		return self::template_public() . $type . '/' . $device . '/' . $name . '.' . $type;
+		return self::template_public() . $type . '/' . $name . '.' . $device . '.' . $type;
 	}
 }
