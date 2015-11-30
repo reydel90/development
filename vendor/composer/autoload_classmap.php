@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Controller' => $baseDir . '/core/base/Controller.php',
+    'Mobile_Detect' => $baseDir . '/core/functions/Mobile_Detect.php',
     'Request' => $baseDir . '/core/base/Request.php',
     'Url' => $baseDir . '/core/functions/Url.php',
 );
