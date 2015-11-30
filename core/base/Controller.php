@@ -7,9 +7,9 @@ class Controller{
 		if(empty($url[0])){
 			unset($url[0]);
 		}
-		//require_once TEMPLATES . $this->template . DS . 'start.php';
-		require_once VIEWS . $this->template . DS . $view . '.php';
-		//require_once TEMPLATES . $this->template . DS . 'end.php';
+		require_once TEMPLATES . $this->template . DS . 'start.php';
+		require_once VIEWS . $view . '.php';
+		require_once TEMPLATES . $this->template . DS . 'end.php';
 	}
 
 	public function detect(){
@@ -29,10 +29,12 @@ class Controller{
 	public function template_public(){
 		return ASSETS_URL . $this->template . '/';
 	}
-	public function blocks($name){
-		return self::template() . 'blocks' . DS . $name . '.php';
+	public function blocks($name, $device){
+		$device = self::detect();
+		return self::template() . 'blocks' . DS . $type . DS . $name . '.php';
 	}
-	public function assets($type, $name){
-		return self::template_public() . $type . '/' . $name . '.' . $type;
+	public function assets($type, $name, $device){
+		$device = self::detect();
+		return self::template_public() . $type . '/' . $device . '/' . $name . '.' . $type;
 	}
 }

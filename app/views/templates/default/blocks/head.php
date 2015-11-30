@@ -6,4 +6,3 @@
 	<title><?php if(!empty($data['title'])){echo $data['title'];}else{echo 'Default title';}?></title>
 </head>
 <body>
-<?php require_once Controller::blocks('navbar');?>
