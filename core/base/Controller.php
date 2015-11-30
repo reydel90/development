@@ -29,9 +29,8 @@ class Controller{
 	public function template_public(){
 		return ASSETS_URL . $this->template . '/';
 	}
-	public function blocks($name, $device){
-		$device = self::detect();
-		return self::template() . 'blocks' . DS . $type . DS . $name . '.php';
+	public function blocks($name){
+		return self::template() . 'blocks' . DS . $name . '.php';
 	}
 	public function assets($type, $name, $device){
 		$device = self::detect();
