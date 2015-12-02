@@ -16,7 +16,7 @@ class Controller{
 		if(file_exists(VIEWS . $view . '.php')){
 			$this->view = VIEWS . $view . '.php';
 		}	
-		require_once self::content();
+		//require_once self::content();
 		require_once self::template();
 	}
 
@@ -42,7 +42,7 @@ class Controller{
 		return ASSETS_URL . $this->template . '/';
 	}
 	public function blocks($name){
-		return self::template() . 'blocks' . DS . $name . '.php';
+		return TEMPLATES . $this->template . DS . 'blocks' . DS . $name . '.php';
 	}
 	public function assets($type, $name, $device){
 		$device = self::detect();
