@@ -17,7 +17,7 @@ class Controller{
 			$this->view = VIEWS . $view . '.php';
 		}	
 		//require_once self::content();
-		require_once self::template();
+		self::template();
 	}
 
 	public function content(){
@@ -35,8 +35,7 @@ class Controller{
 	}
 
 	public function template(){
-		//require_once TEMPLATES . $this->template . DS;
-		return TEMPLATES . $this->template . DS . $this->template . '.php';
+		require_once TEMPLATES . $this->template . DS . $this->template . '.php';
 	}
 	public function template_public(){
 		return ASSETS_URL . $this->template . '/';
