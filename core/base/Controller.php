@@ -20,7 +20,7 @@ class Controller{
 	}
 
 	public function content(){
-		require_once $this->view;
+		return $this->view;
 	}
 	public function detect(){
 		$detect = new Mobile_Detect;
