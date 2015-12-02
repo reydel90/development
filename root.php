@@ -21,4 +21,5 @@ define('TEMPLATES', VIEWS . 'templates' . DS);
 //Url routes
 define('BASE_URL', 'http://development.no-ip.org');
 define('ASSETS_URL', '/templates/');
+define('APP_NAME', 'El blog de adelita');
 require_once CONFIG_PATH . 'init.php';

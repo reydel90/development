@@ -1,1 +1,68 @@
-body{background-color: orange;}
+html,
+body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+body {
+  font-family: -apple-system, SF UI Text, Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-size: 14px;
+  line-height: 1.4;
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+@media all and (width: 1024px) and (height: 691px) and (orientation: landscape) {
+  html,
+  body {
+    height: 671px;
+  }
+}
+@media all and (width: 1024px) and (height: 692px) and (orientation: landscape) {
+  html,
+  body {
+    height: 672px;
+  }
+}
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+}
+a,
+input,
+textarea,
+select {
+  outline: 0;
+}
+a {
+  text-decoration: none;
+  color: #007aff;
+}
+p {
+  margin: 1em 0;
+}
+/* === Grid === */
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
