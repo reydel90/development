@@ -35,7 +35,7 @@ class Controller{
 	}
 
 	public function template(){
-		require_once TEMPLATES . $this->template . DS . $this->template . '.php';
+		require_once TEMPLATES . $this->template . DS . 'main.php';
 	}
 	public function template_public(){
 		return ASSETS_URL . $this->template . '/';
