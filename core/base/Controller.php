@@ -21,7 +21,7 @@ class Controller{
 	}
 
 	public function content(){
-		return $this->view;
+		require_once $this->view;
 	}
 	public function detect(){
 		$detect = new Mobile_Detect;
@@ -41,7 +41,7 @@ class Controller{
 		return ASSETS_URL . $this->template . '/';
 	}
 	public function blocks($name){
-		return TEMPLATES . $this->template . DS . 'blocks' . DS . $name . '.php';
+		require_once TEMPLATES . $this->template . DS . 'blocks' . DS . $name . '.php';
 	}
 	public function assets($type, $name, $device){
 		$device = self::detect();
