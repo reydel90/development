@@ -5,7 +5,7 @@ class pageController extends Controller{
 	public function index(){
 		$this->title = 'home';
 		$device = $this->detect();
-		echo $device;
-		$this->view('page/index', ['title' => $this->title]);
+		$this->view('page/index');
+		$this->passData(['title' => $this->title, 'device' => $device]);
 	}
 }
