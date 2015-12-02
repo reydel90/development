@@ -19,7 +19,9 @@ class Controller{
 		//require_once self::content();
 		self::template();
 	}
-	public function passData($data = []){}
+	public function passData($data = []){
+		
+	}
 	public function content(){
 		require_once $this->view;
 	}
