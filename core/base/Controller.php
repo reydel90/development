@@ -22,9 +22,9 @@ class Controller{
 		//self::content($this->view, $this->data);
 		self::template();
 	}
-	public function content($data = []){
-		$data = $this->data;
-		print_r($data);
+	public function content($this->data){
+		//$data = $this->data;
+		//print_r($data);
 		require_once $this->view;
 	}
 	public function detect(){
