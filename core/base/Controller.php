@@ -17,7 +17,7 @@ class Controller{
 			$this->view = VIEWS . $view . '.php';
 		}	
 		//require_once self::content();
-		self::template();
+		self::template($data = []);
 	}
 
 	public function content(){

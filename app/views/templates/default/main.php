@@ -3,7 +3,7 @@
 	<?php Controller::blocks('head');?>
 <body>
 	<h1>este es el template default</h1>
-	<?php Controller::content();?>
+	<?php Controller::content();?><!-- Funcion encargada de cargar la vista requerida -->
 	<h3>Mas contenido de relleno</h3>
 </body>
 </html>
