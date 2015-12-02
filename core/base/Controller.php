@@ -24,7 +24,8 @@ class Controller{
 	}
 
 	public function data(){
-		$data = $this->data;		
+		return $this->data;
+
 	}
 	public function content(){		
 		require_once $this->view;
