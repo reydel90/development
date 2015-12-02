@@ -16,7 +16,7 @@ class Controller{
 		*/
 		if(file_exists(VIEWS . $view . '.php')){
 			$this->view = VIEWS . $view . '.php';
-			$this->data = $data;
+			print_r($data);
 		}	
 		//self::content($this->view, $this->data);
 		self::template($this->data);
