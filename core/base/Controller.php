@@ -17,7 +17,7 @@ class Controller{
 			$this->view = VIEWS . $view . '.php';
 		}	
 		require_once self::content();
-		echo self::template() . '<br>';
+		require_once self::template();
 	}
 
 	public function content(){
