@@ -6,6 +6,6 @@ class pageController extends Controller{
 		$this->title = 'home';
 		$device = $this->detect();
 		$this->view('page/index');
-		$this->passData(['title' => $this->title, 'device' => $device]);
+		$this->passData('title' => $this->title, 'device' => $device);
 	}
 }
