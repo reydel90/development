@@ -23,9 +23,8 @@ class Controller{
 		self::template();
 	}
 
-	public function data($data = []){
-		$data = $this->data;
-		print_r($data);		
+	public function data(){
+		$data = $this->data;		
 	}
 	public function content(){		
 		require_once $this->view;
