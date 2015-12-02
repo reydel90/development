@@ -2,11 +2,9 @@
 class pageController extends Controller{
 	protected $title  = '';	  
 
-	public function index($data = []){
+	public function index(){
 		$this->title = 'home';
 		$device = $this->detect();
-		$this->view('page/index');
-		$data['title'] = $this->title;
-		
+		$this->view('page/index', ['title' => $this->title]);		
 	}
 }
