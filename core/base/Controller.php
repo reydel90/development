@@ -16,10 +16,10 @@ class Controller{
 		*/
 		if(file_exists(VIEWS . $view . '.php')){
 			$this->view = VIEWS . $view . '.php';
-            $this->data = $data;
+            //$this->data = $data;
 		}	
 		//require_once self::content();
-		self::template($this->data);
+		self::template($data);
 	}
 
 	public function content(){
