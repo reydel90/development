@@ -35,13 +35,13 @@ class Controller{
 
 	public function template(){
 		//require_once TEMPLATES . $this->template . DS;
-		require_once TEMPLATES . $this->template . DS . $this->template . '.php';
+		return TEMPLATES . $this->template . DS . $this->template . '.php';
 	}
 	public function template_public(){
 		return ASSETS_URL . $this->template . '/';
 	}
 	public function blocks($name){
-		require_once self::template() . 'blocks' . DS . $name . '.php';
+		return self::template() . 'blocks' . DS . $name . '.php';
 	}
 	public function assets($type, $name, $device){
 		$device = self::detect();
