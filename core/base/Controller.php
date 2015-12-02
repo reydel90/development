@@ -16,7 +16,8 @@ class Controller{
 		if(file_exists(VIEWS . $view . '.php')){
 			$this->view = VIEWS . $view . '.php';
 		}	
-		require_once self::template();
+		echo self::content();
+		echo self::template();
 	}
 
 	public function content(){
