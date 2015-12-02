@@ -17,11 +17,13 @@ class Controller{
 		if(file_exists(VIEWS . $view . '.php')){
 			$this->view = VIEWS . $view . '.php';
 			print_r($data);
+			$this->data = $data;
 		}	
 		//self::content($this->view, $this->data);
-		self::template($this->data);
+		self::template();
 	}
-	public function content(){
+	public function content($data = []){
+		$data = $this->data;
 		require_once $this->view;
 	}
 	public function detect(){
