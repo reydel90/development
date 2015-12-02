@@ -16,7 +16,7 @@ class Controller{
 		*/
 		if(file_exists(VIEWS . $view . '.php')){
 			$this->view = VIEWS . $view . '.php';
-			print_r($data);
+			
 			$this->data = $data;
 		}	
 		//self::content($this->view, $this->data);
@@ -24,6 +24,7 @@ class Controller{
 	}
 	public function content($data = []){
 		$data = $this->data;
+		print_r($data);
 		require_once $this->view;
 	}
 	public function detect(){
