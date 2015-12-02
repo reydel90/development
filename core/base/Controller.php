@@ -2,7 +2,8 @@
 class Controller{
 	protected $template = 'default',
 			  $device   = 'desktop',
-			  $view     = 'errors/404';		  
+			  $view     = 'errors/404',
+			  $data     = [];	  
 	public function view($view, $data = []){
 		$url = Url::parse();
 		if(empty($url[0])){
@@ -15,9 +16,10 @@ class Controller{
 		*/
 		if(file_exists(VIEWS . $view . '.php')){
 			$this->view = VIEWS . $view . '.php';
+            $this->data = $data;
 		}	
 		//require_once self::content();
-		self::template($data = []);
+		self::template($this->data);
 	}
 
 	public function content(){
@@ -34,7 +36,7 @@ class Controller{
 		return $this->device;
 	}
 
-	public function template(){
+	public function template($data = []){
 		require_once TEMPLATES . $this->template . DS . 'main.php';
 	}
 	public function template_public(){
