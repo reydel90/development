@@ -1,4 +1,4 @@
-<?php $data = Controller::data();?>
+<?php // $data = Controller::data();?>
 <!DOCTYPE html>
 <html>
 	<head>

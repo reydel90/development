@@ -42,6 +42,7 @@ class Controller{
 	}
 
 	public function template(){
+		self::data();
 		require_once TEMPLATES . $this->template . DS . 'main.php';
 	}
 	public function template_public(){
