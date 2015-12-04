@@ -19,7 +19,6 @@ class Controller{
 			
 			$this->data = $data;
 		}	
-		//self::content($this->view, $this->data);
 		self::template();
 	}
 
@@ -42,7 +41,6 @@ class Controller{
 	}
 
 	public function template(){
-		self::data();
 		require_once TEMPLATES . $this->template . DS . 'main.php';
 	}
 	public function template_public(){
