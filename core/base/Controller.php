@@ -53,4 +53,5 @@ class Controller{
 		$device = self::detect();
 		return self::template_public() . $type . '/' . $name . '.' . $device . '.' . $type;
 	}
+	//****************************************************************************************//
 }
