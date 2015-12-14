@@ -18,9 +18,7 @@ class Request{
 		$this->controller = new $this->controller;
 
 		if(file_exists(VIEWS . $url[0] . '.php')){
-			if(method_exists($this->controller, $url[0])){
 				$this->method = $url[0];
-				unset($url[0]);
 			}			
 		}
 		if(isset($url[1])){
