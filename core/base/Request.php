@@ -9,21 +9,14 @@ class Request{
 		$url = Url::parse();
 
 
-		//$url[0] = $url[0] . 'Controller';
-		if(file_exists(CONTROLLERS . $url[0] . 'Controller.php')){
+		$url[0] = $url[0] . 'Controller';
+		if(file_exists(CONTROLLERS . $url[0] . '.php')){
 			$this->controller = $url[0];
 			unset($url[0]);
 		}
-
 		require_once CONTROLLERS . $this->controller . '.php';
 		$this->controller = new $this->controller;
 
-		if(file_exists(VIEWS . $url[0] . '.php')){
-			if(method_exists($this->controller, $url[0])){
-				$this->method = $url[0];
-				unset($url[0]);
-			}
-		}
 		if(isset($url[1])){
 			if(method_exists($this->controller, $url[1])){
 				$this->method = $url[1];
