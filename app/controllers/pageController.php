@@ -7,4 +7,8 @@ class pageController extends Controller{
 		$device = $this->detect();
 		$this->view('page/index', ['title' => $this->title, 'device' => $device]);		
 	}
+	public function contact(){
+		$this->title = 'Contact';
+		$this->view('contact', ['title' => $this->title]);			
+	}
 }
